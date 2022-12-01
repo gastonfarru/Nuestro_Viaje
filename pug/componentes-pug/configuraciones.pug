@@ -1,9 +1,19 @@
--var enlaces=['Inicio', 'Destinos', 'Contacto']
--var titulos = ["Título Principal", "Subtitulo 1", "Subtitulo 2", "Subtitulo 3"]
+-var enlacesHeader=['Inicio', 'Destinos', 'Contacto']
+-var destinos=['España','India', 'Thailandia', 'Malasia']
+-var mapa= ['Mapa del Recorrido']
+-var enlacesFooter=['GitHub', 'Linkedin', 'Instagram']
 
-mixin caja(imagen, titulo, contenido)
+mixin intro(imagen, titulo, contenido)
+	.intro 
+		.intro__imagen: img(src="images/thailandia/"+imagen)
+		.intro__contenido 
+			h3=titulo 
+			p=contenido 
+
+mixin caja(titulo, contenido, imagen)
 	.caja 
-		.caja__imagen: img(src="images/"+imagen)
 		.caja__contenido 
 			h3=titulo 
 			p=contenido 
+		.caja__imagen: img(src="images/thailandia/"+imagen)
+			
